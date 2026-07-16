@@ -1617,6 +1617,49 @@
     .revenue-row.total strong { color: var(--gold); font-size: 18px; }
     .scenario-row strong { color: var(--green); }
     .scenario-row.focus { background: rgba(247,201,72,.08); }
+    .base-revenue-head { max-width: 1200px; margin: 12px auto 7px; display: flex; justify-content: space-between; gap: 12px; align-items: center; }
+    .earning-head { max-width: 1200px; margin: 0 auto 18px; display: grid; grid-template-columns: 1.35fr .65fr; gap: 24px; align-items: end; }
+    .earning-head h2 { margin: 6px 0 7px; }
+    .earning-head p { margin: 0; color: var(--muted); font-size: 12px; line-height: 1.45; }
+    .earning-total { padding: 16px 18px; border: 1px solid rgba(53,224,145,.34); border-radius: 10px; background: rgba(53,224,145,.07); }
+    .earning-total span, .earning-total small { display: block; color: var(--muted); font-size: 9px; }
+    .earning-total strong { display: block; margin: 5px 0; color: var(--green); font-size: 27px; }
+    .earning-kpis { max-width: 1200px; margin: 0 auto 12px; display: grid; grid-template-columns: repeat(4,minmax(0,1fr)); gap: 9px; }
+    .earning-kpis div { padding: 11px 13px; border: 1px solid rgba(0,229,255,.2); border-radius: 8px; background: rgba(0,229,255,.05); }
+    .earning-kpis span, .earning-kpis small { display: block; color: var(--muted); font-size: 8px; }
+    .earning-kpis strong { display: block; margin: 3px 0; color: var(--cyan); font-size: 17px; }
+    .earning-calcs { max-width: 1200px; margin: 0 auto 12px; display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 9px; }
+    .earning-calcs.two { grid-template-columns: repeat(2,minmax(0,1fr)); }
+    .earning-calcs article { padding: 14px; border: 1px solid rgba(255,255,255,.12); border-radius: 9px; background: rgba(255,255,255,.045); }
+    .earning-calcs article > span { color: var(--gold); font-size: 9px; letter-spacing: .08em; text-transform: uppercase; }
+    .earning-calcs h3 { margin: 5px 0; font-size: 17px; }
+    .earning-calcs p { margin: 0 0 9px; color: var(--muted); font-size: 9px; }
+    .earning-calcs article > div { display: grid; grid-template-columns: auto 1fr auto 1fr; gap: 6px; align-items: center; }
+    .earning-calcs b { color: var(--green); font-size: 12px; }
+    .earning-calcs small { color: var(--muted); font-size: 8px; }
+    .earning-summary { max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: repeat(4,minmax(0,1fr)); gap: 9px; }
+    .earning-summary div { padding: 10px 12px; border-left: 3px solid var(--green); background: rgba(53,224,145,.06); }
+    .earning-summary span, .earning-summary small { display: block; color: var(--muted); font-size: 8px; }
+    .earning-summary strong { display: block; margin: 3px 0; font-size: 14px; }
+    .engagement-case { max-width: 1200px; margin: 9px auto 0; display: grid; grid-template-columns: 1.2fr .7fr .9fr 1.25fr; gap: 8px; }
+    .engagement-case > div { padding: 9px 11px; border: 1px solid rgba(247,201,72,.2); border-radius: 8px; background: rgba(247,201,72,.05); }
+    .engagement-case span, .engagement-case strong, .engagement-case small { display: block; }
+    .engagement-case span, .engagement-case small { color: var(--muted); font-size: 7px; }
+    .engagement-case strong { margin: 3px 0; color: var(--gold); font-size: 11px; line-height: 1.3; }
+    .engagement-case .result { border-color: rgba(53,224,145,.32); background: rgba(53,224,145,.07); }
+    .engagement-case .result strong { color: var(--green); }
+    .base-revenue-head span { color: var(--gold); font-size: 9px; letter-spacing: .1em; text-transform: uppercase; }
+    .base-revenue-head strong { font-size: 12px; }
+    .base-revenue-grid { max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: repeat(4,minmax(0,1fr)); gap: 7px; }
+    .base-revenue-grid article { padding: 9px 10px; border: 1px solid rgba(255,255,255,.11); border-radius: 8px; background: rgba(255,255,255,.04); }
+    .base-revenue-grid span, .base-revenue-grid strong, .base-revenue-grid small { display: block; }
+    .base-revenue-grid span { color: var(--cyan); font-size: 8px; text-transform: uppercase; letter-spacing: .06em; }
+    .base-revenue-grid strong { margin: 3px 0; color: var(--green); font-size: 16px; }
+    .base-revenue-grid small { color: var(--gold); font-size: 7px; line-height: 1.3; }
+    .base-revenue-grid p { margin: 4px 0 0; color: var(--muted); font-size: 7px; line-height: 1.35; }
+    .revenue-sequence { max-width: 1200px; margin: 8px auto 0; display: flex; flex-wrap: wrap; gap: 6px; align-items: center; }
+    .revenue-sequence b { color: var(--gold); font-size: 8px; margin-right: 3px; }
+    .revenue-sequence span { padding: 4px 7px; border: 1px solid rgba(53,224,145,.18); border-radius: 99px; color: var(--muted); font-size: 7px; }
 
     .moat-strip, .unit-economics, .investor-dashboard, .return-framework { max-width: 1200px; margin: 12px auto 0; display: grid; grid-template-columns: repeat(4, minmax(0,1fr)); gap: 10px; }
     .moat-strip div, .unit-economics div, .return-framework div { padding: 12px 14px; border-left: 3px solid var(--green); background: rgba(53,224,145,.06); }
@@ -1919,13 +1962,16 @@
       }
 
       .thesis-grid, .customer-grid, .evidence-grid { grid-template-columns: repeat(2, minmax(0,1fr)); }
-      .server-mode-grid, .server-economy { grid-template-columns: repeat(2,minmax(0,1fr)); }
+      .server-mode-grid, .server-economy, .base-revenue-grid { grid-template-columns: repeat(2,minmax(0,1fr)); }
       .org-grid, .control-grid { grid-template-columns: repeat(2, minmax(0,1fr)); }
 
       .year-budget-head,
       .year-finance-grid {
         grid-template-columns: 1fr;
       }
+      .earning-head { grid-template-columns: 1fr; }
+      .earning-kpis, .earning-summary { grid-template-columns: repeat(2,minmax(0,1fr)); }
+      .engagement-case { grid-template-columns: repeat(2,minmax(0,1fr)); }
 
       .payroll-split { grid-template-columns: 1fr; }
       .payroll-kpis { grid-template-columns: repeat(2,minmax(0,1fr)); }
@@ -2037,11 +2083,14 @@
       }
 
       .server-mode-grid,
-      .server-economy {
+      .server-economy,
+      .base-revenue-grid {
         grid-template-columns: 1fr;
       }
 
       .payroll-kpis { grid-template-columns: 1fr; }
+      .earning-kpis, .earning-summary, .earning-calcs, .earning-calcs.two { grid-template-columns: 1fr; }
+      .engagement-case { grid-template-columns: 1fr; }
       .infra-kpis { grid-template-columns: 1fr; }
       .infra-row { grid-template-columns: 1fr; gap: 3px; }
       .infra-row.header { display: none; }
