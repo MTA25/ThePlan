@@ -6,7 +6,24 @@
   <title>No Competition Real Estate | Dubai Real Estate AI</title>
   <link rel="stylesheet" href="css/styles.css" />
 </head>
-<body class="deck-mode">
+<body class="deck-mode auth-locked">
+  <div class="auth-gate" id="authGate" role="dialog" aria-modal="true" aria-labelledby="authTitle">
+    <div class="auth-panel">
+      <img src="dubai-real-estate-ai-assets/CommpanyLogo.png" alt="No Competition Real Estate" />
+      <div class="eyebrow">Confidential investor material</div>
+      <h1 id="authTitle">Private Access</h1>
+      <p>This presentation contains confidential product, financial, and investment information.</p>
+      <form id="authForm" autocomplete="off">
+        <label for="authEmail">Authorized email</label>
+        <input id="authEmail" name="email" type="email" inputmode="email" autocomplete="username" required />
+        <label for="authPassword">Password</label>
+        <input id="authPassword" name="password" type="password" autocomplete="current-password" required />
+        <button type="submit" id="authSubmit">Open presentation</button>
+        <div class="auth-error" id="authError" role="alert" aria-live="polite"></div>
+      </form>
+      <small>Access is limited to one authorized account. Sharing or redistribution is prohibited.</small>
+    </div>
+  </div>
   <div class="particles" aria-hidden="true"></div>
   <div class="cosmos" aria-hidden="true">
     <div class="star-field"></div>
@@ -412,6 +429,36 @@
       </div>
 
       <p class="budget-note reveal"><b>Finance note:</b> Year 1 remaining capacity assumes the $106M invested to date is included in the $150M–$350M Year 1 envelope. The five-year total is the sum of the annual ranges. The $10B figure is a management revenue target for the end of Year 6—not a forecast, valuation, or guaranteed investor return—and requires a bottom-up operating model before external circulation.</p>
+    </section>
+
+    <section id="historic-spend" class="finance-detail-slide">
+      <div class="section-head reveal">
+        <div><div class="eyebrow">Management reconstruction • subject to audit</div><h2>How $106M Funded Development</h2></div>
+        <p>Capital deployed while the product remains under development, concentrated on external production capacity, technology, art creation, infrastructure, workplaces, and development equipment.</p>
+      </div>
+      <div class="historic-kpis reveal">
+        <article><span>Total development capital</span><strong>$106M</strong><small>management estimate to be reconciled</small></article>
+        <article><span>People + production</span><strong>$78M</strong><small>73.6% of reconstructed spend</small></article>
+        <article><span>Technology + equipment</span><strong>$20M</strong><small>18.9% of reconstructed spend</small></article>
+        <article><span>Workspace + administration</span><strong>$8M</strong><small>7.5% of reconstructed spend</small></article>
+      </div>
+      <div class="historic-layout reveal">
+        <div class="historic-table">
+          <div class="historic-row header"><b>Development category</b><b>Amount</b><b>Share</b><b>What it funded</b></div>
+          <div class="historic-row"><span>Freelance game developers</span><strong>$38M</strong><b>35.8%</b><small>Gameplay, tools, UI, systems, optimization, integrations, prototypes, and production milestones.</small></div>
+          <div class="historic-row"><span>2D / 3D art + animation</span><strong>$22M</strong><b>20.8%</b><small>Characters, environments, properties, furniture, materials, UI art, animation, rendering, and revisions.</small></div>
+          <div class="historic-row"><span>Server, data + AI specialists</span><strong>$15M</strong><b>14.2%</b><small>Backend services, multiplayer architecture, data pipelines, analytics, AI training work, security, and deployment.</small></div>
+          <div class="historic-row"><span>QA, audio + production support</span><strong>$3M</strong><b>2.8%</b><small>Testing, compatibility, production management, sound, documentation, localization preparation, and specialist support.</small></div>
+          <div class="historic-row"><span>Devices + development equipment</span><strong>$8M</strong><b>7.5%</b><small>Gaming PCs, GPUs, displays, test phones/tablets, storage, networking, peripherals, warranty, and replacement equipment.</small></div>
+          <div class="historic-row"><span>Software, licenses + digital assets</span><strong>$7M</strong><b>6.6%</b><small>Game engine, IDEs, 2D/3D software, collaboration, source control, asset libraries, plugins, and commercial licenses.</small></div>
+          <div class="historic-row"><span>Cloud + build infrastructure</span><strong>$5M</strong><b>4.7%</b><small>Compute, storage, build pipelines, databases, backups, testing environments, monitoring, and content delivery.</small></div>
+          <div class="historic-row"><span>Workspaces + production facilities</span><strong>$6M</strong><b>5.7%</b><small>Studios, rent, utilities, connectivity, meeting space, security, maintenance, fit-out, and shared facilities.</small></div>
+          <div class="historic-row"><span>Legal, IP + administration</span><strong>$2M</strong><b>1.9%</b><small>Company administration, contracts, intellectual-property protection, accounting, compliance, and professional services.</small></div>
+          <div class="historic-row total"><b>Total reconstructed development spend</b><strong>$106M</strong><b>100%</b><small>Amounts require ledger and document reconciliation.</small></div>
+        </div>
+      </div>
+      <div class="historic-evidence reveal"><b>Required support</b><span>Freelance contracts</span><span>Milestone acceptance</span><span>Invoices</span><span>Bank transfers</span><span>Payroll records</span><span>Device register</span><span>Software licenses</span><span>IP assignments</span></div>
+      <p class="budget-note reveal">This is an illustrative management reconstruction created from the development categories described by management. It is not an audited statement of historical expenditure. Replace each amount with verified ledger totals before investor distribution or due diligence.</p>
     </section>
 
     <section id="team-cost-baseline" class="finance-detail-slide">
@@ -875,6 +922,7 @@
     <button class="slide-button" type="button" id="nextSlide">Next</button>
   </div>
   <div class="slide-progress" aria-hidden="true"><span id="slideProgress"></span></div>
+  <script src="js/auth-gate.js"></script>
   <script src="js/ambient-effects.js"></script>
   <script src="js/scroll-reveal.js"></script>
   <script src="js/slide-deck.js"></script>
